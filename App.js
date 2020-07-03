@@ -37,7 +37,6 @@ export default function App() {
   };
 
   const startGameHandler = (selectedNumber) => {
-    console.log("CHECK");
     setUserNumber(selectedNumber);
   };
 
