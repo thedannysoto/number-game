@@ -23,27 +23,26 @@ export default function App() {
 
   if (!dataLoaded) {
     return (
-    <AppLoading 
-      startAsync={fetchFonts} 
-      onFinish={() => setDataLoaded(true)} 
-      onError={(err) => console.log(err)}
-    />
+      <AppLoading 
+        startAsync={fetchFonts} 
+        onFinish={() => setDataLoaded(true)} 
+        onError={(err) => console.log(err)}
+      />
     );
   };
 
   const configureNewGameHandler = () => {
     setGuessRounds(0);
     setUserNumber(null);
-  }
+  };
 
   const startGameHandler = (selectedNumber) => {
     setUserNumber(selectedNumber);
-    setGuessRounds(0);
   };
 
   const gameOverHandler = numOfRounds => {
     setGuessRounds(numOfRounds);
-  }
+  };
 
   let content = <StartGameScreen onStartGame={startGameHandler} />;
 
