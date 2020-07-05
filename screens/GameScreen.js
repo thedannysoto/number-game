@@ -103,7 +103,8 @@ const styles = StyleSheet.create({
     },
     listContainer: {
         flex: 1,
-        width: '60%'
+        width: '60%',
+        marginBottom: 20
     },
     list: {
         flexGrow: 1,
