@@ -46,8 +46,8 @@ const GameScreen = props => {
             (direction === 'lower' && currentGuess < props.userChoice) || 
             (direction === 'higher' && currentGuess > props.userChoice)
             ) {
-            Alert.alert('Don\'t Lie!', 'Please give the correct hints.', [
-                {text: 'Sorry!', style: 'cancel'}
+            Alert.alert('Tell the truth!', 'Please give the correct hints.', [
+                {text: 'Okay!', style: 'cancel'}
             ]);
             return;
         }
@@ -66,7 +66,7 @@ const GameScreen = props => {
     return(
         <View style={styles.screen}>
             <Text style={DefaultStyles.title}>Opponent's Guess</Text>
-            <NumberContainer>{currentGuess}</NumberContainer>
+            <NumberContainer style={styles.numberContainer}>{currentGuess}</NumberContainer>
             <Card style={styles.buttonContainer}>
                 <MainButton onPress={nextGuessHandler.bind(this, 'lower')} >
                     <Ionicons name="md-remove" size={24} color="white" /> 
@@ -93,6 +93,9 @@ const styles = StyleSheet.create({
         flex: 1,
         padding: 10,
         alignItems: 'center'
+    },
+    numberContainer: {
+        marginVertical: 25
     },
     buttonContainer: {
         flexDirection: 'row',
