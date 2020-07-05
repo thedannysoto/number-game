@@ -20,8 +20,8 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         marginVertical: 10,
         alignItems: 'center',
-        justifyContent: 'center'
-    
+        justifyContent: 'center',
+        width: 60
     },
     number: {
         color: 'white',

@@ -51,7 +51,8 @@ const styles = StyleSheet.create({
     },
     resultContainer: {
         marginHorizontal: 30,
-        marginVertical: 15
+        marginTop: 15,
+        marginBottom: 25
     },
     resultText: {
         textAlign: 'center',
